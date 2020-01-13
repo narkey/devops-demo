@@ -1,0 +1,15 @@
+- name: Simple playbook
+  tags: ["print_hostname"]
+  hosts: mbp
+  tasks:
+  - name: Print hostname
+    shell: "hostname"
+    register: "hostname_output"
+  - name: debug
+    debug:
+      var: "hostname_output"
+  - name: Create a directory if it does not exist
+    file:
+      path: /tmp/demo
+      state: directory
+      mode: '0755'
