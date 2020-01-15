@@ -8,7 +8,10 @@ Install Helm
 
 
 ## Docker
+### Existing image from dockerhub
+docker run -d -p 27017-27019:27017-27019 --name mongodb mongo
 
+### Personalized image
 cd helloworld
 
 docker build . -t nodehelloimg
