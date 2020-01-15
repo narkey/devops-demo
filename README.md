@@ -13,7 +13,7 @@ cd helloworld
 
 docker build . -t nodehelloimg
 
-docker run --name nodehello -p 127.0.0.1:3000:3000 -t nodehelloimg
+docker run -d --name nodehello -p 127.0.0.1:3000:3000 -t nodehelloimg
 
 docker rm nodehello  --force
 
